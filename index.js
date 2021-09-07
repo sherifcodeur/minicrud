@@ -11,6 +11,9 @@ const productRoutes = require('./routes/productRoutes');
 const controller = require('./controllers/viewController');
 
 
+const methodOverride = require('method-override');
+
+
 
 // creating the express app
 const app = express();
@@ -18,11 +21,15 @@ const app = express();
 // template engine 
 app.set('view engine','ejs');
 
+app.use(methodOverride('_method'));
+
 // app.use(express);
 // app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
+
+
 
 
 // DATABASE CONNEXION ----------------------------------//

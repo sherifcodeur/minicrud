@@ -18,24 +18,25 @@
 
     <div class="formulaire">
 
-        <form action="/products" method="POST" class="formy">
+        <form action="/products/<%= theproduct.id %>?_method=PUT" method="POST" class="formy">
 
+            
 
             <div>
             <label for="name">Name Of Product</label>
-            <input type="text" name="name" id="nameproduct"></div>
+            <input type="text" name="name" id="nameproduct" value="<%= theproduct.name %>"></div>
 
 
             <div><label for="decription">description</label>
-                    <textarea name="description" id="descriptionproduct" rows="4" cols="50"> </textarea></div>
+                    <textarea name="description" id="descriptionproduct" rows="4" cols="50"><%=theproduct.description%></textarea></div>
              
             <div>
                 <label for="price">Price Of product</label>
-                <input type="text" name="price" id="priceproduct">
+                <input type="text" name="price" id="priceproduct" value="<%= theproduct.price %>">
             
             </div>
             
-            <div><button type="submit">Add Product</button></div>
+            <div><button type="submit">UPDATE Product</button></div>
             
 
 

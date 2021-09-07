@@ -16,28 +16,19 @@
 
 
 
-        <section class="lesproduits">
+        <section class="leproduit">
 
-            <h3>on doit voir tous les produits </h3>
+            <h3>un seul produit </h3>
 
 
-            <% allproducts.forEach(product=>{ %>
-            <div>
+            <%= theproduct.name %>
 
-              <a href="/products/<%= product.id %>"><%= product.name %></a>  
-            </div>
+            <%= theproduct.description %>
 
-            <div>
+            <%= theproduct.price %>
 
-                <%= product.description %>
-            </div>
-
-            <div>
-
-                <%= product.price %>
-            </div>
-
-            <% }) %>
+            <a href="/products/<%= theproduct.id %>/edit">Edit Product</a>
+            
 
 
 
