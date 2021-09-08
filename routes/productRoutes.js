@@ -19,9 +19,13 @@ router.post('/',productController.store);
 
 router.get('/:id/edit',productController.edit);
 
+router.get('/:id/delete',productController.destroy);
+
 router.get('/:id',productController.show);
 
 router.put('/:id',productController.update);
+
+
 
 
 

@@ -11,6 +11,7 @@ const productRoutes = require('./routes/productRoutes');
 const controller = require('./controllers/viewController');
 
 
+// for overriding methods in form for put and delete
 const methodOverride = require('method-override');
 
 
@@ -21,10 +22,10 @@ const app = express();
 // template engine 
 app.set('view engine','ejs');
 
+//middleware for overriding form method
 app.use(methodOverride('_method'));
 
-// app.use(express);
-// app.use(express.json());
+//
 app.use(express.urlencoded({
   extended: true
 }));

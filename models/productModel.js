@@ -7,11 +7,20 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema([{
 
-    name: String ,
+    name: {
+        type:String,
+        required:[true,"the name is a required field"],
+    } ,
 
-    description : String ,
+    description :{
+        type:String,
+        required:[true,"the descriptionis a required field"],
+    },
 
-    price: Number ,
+    price:{
+        type:Number,
+        required:[true,"the price is a required field"],
+    } ,
 
 
 
