@@ -9,7 +9,7 @@ const productController = require('../controllers/productController');
 
 
 
-// all the routes for the ressource Product
+// all the routes for the ressource Product here
 
 router.get('/',productController.index);
 
